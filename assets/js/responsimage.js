@@ -27,9 +27,9 @@
 								width = $(this).width();
 								height = $(this).height();
 
-								if($(this).css('font-family') === 'pixel-ratio-2') 
-								{ 
-									width *= 2; height *= 2; 
+								if($(this).css('font-family') === 'pixel-ratio-2')
+								{
+									width *= 2; height *= 2;
 								}
 
 								imgResponsive = $('body').data('responsimage').replace('width', width).replace('height', height).replace('filename', filename);
