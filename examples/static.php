@@ -30,7 +30,7 @@ if(!$height)
 		
 		<script src="http://www.google.com/jsapi" type="text/javascript"></script>
 		<script type="text/javascript">google.load('jquery', '1')</script>
-		<script src="../assets/js/responsimage.min.js"></script>
+		<script src="../assets/js/responsimage.js"></script>
 
 	</body>
 
