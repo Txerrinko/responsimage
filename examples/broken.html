@@ -6,18 +6,18 @@
 		<title>responsimage.com</title>
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 		<style type="text/css">@media(-webkit-min-device-pixel-ratio: 2){.responsimage{font-family: 'pixel-ratio-2' }}</style>
-
+	
 	</head>
 
 	<body style="text-align: center" data-responsimage="http://imageizer.com/image/2/width/height/5/0/uploads/filename">
 		
-		<img data-responsimage="4884749481_edd0b31c6e_o-1334773151.jpg" class="responsimage" />
+		<img data-responsimage="disabled" class="responsimage" />
 
 		<script src="http://www.google.com/jsapi" type="text/javascript"></script>
 		<script type="text/javascript">google.load('jquery', '1')</script>
 		<script src="../assets/js/responsimage.min.js"></script>
 		<script type="text/javascript">
-		
+
 			(
 				function ()
 				{
@@ -25,9 +25,8 @@
 
 					function respond()
 					{
-						/* request a new image at every 100px jump */
-						$('.responsimage').width(Math.floor($(window).width()/100) * 100);
-						$('.responsimage').height(Math.floor($(window).height()/100) * 100);
+						$('.responsimage').width($(window).width() * .9);
+						$('.responsimage').height($(window).height() * .9);
 					}
 
 					$(document).ready(

@@ -2,10 +2,9 @@
 <html>
 
 	<head>
-		
-		<title>responsimage</title>
-		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
+		<title>responsimage.com</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 		<style type="text/css">
 
 			.responsimage { margin: 20px auto; display: block; }
@@ -20,8 +19,8 @@
 			@media (-webkit-min-device-pixel-ratio: 2) { /* for iphone */
 				.responsimage { 
 					-webkit-background-size: 560px 620px; 
-					width: 280px; height: 310px; 
-					font-family: 'pixel-ratio';
+					width: 280px; height: 310px; /* 2X what it should be */
+					font-family: 'pixel-ratio-2';
 				} 
 			}
 
@@ -29,13 +28,13 @@
 
 	</head>
 
-	<body>
+	<body data-responsimage="http://imageizer.com/image/2/width/height/5/0/uploads/filename">
 		
 		<img data-responsimage="4884749481_edd0b31c6e_o-1334773151.jpg" class="responsimage" />
 
 		<script src="http://www.google.com/jsapi" type="text/javascript"></script>
 		<script type="text/javascript">google.load('jquery', '1')</script>
-		<script src="http://raw.github.com/kirkstrobeck/responsimage/master/js/responsimage.min.js"></script>
+		<script src="../assets/js/responsimage.min.js"></script>
 
 	</body>
 

@@ -3,7 +3,7 @@
 	function ()
 	{
 		'use strict';
-
+		
 		$(document).ready(
 			function()
 			{
@@ -27,10 +27,17 @@
 								width = $(this).width();
 								height = $(this).height();
 
-								if($(this).css('font-family') === 'pixel-ratio-2') { width *= 2; height *= 2; }
+								if($(this).css('font-family') === 'pixel-ratio-2') 
+								{ 
+									width *= 2; height *= 2; 
+								}
 
-								imgResponsive = 'http://imageizer.com/image/2/' + width + '/' + height + '/5/0/uploads/' + filename;
-								$(this).attr('src', imgResponsive);
+								imgResponsive = $('body').data('responsimage').replace('width', width).replace('height', height).replace('filename', filename);
+
+								if(filename !== 'disabled')
+								{
+									$(this).attr('src', imgResponsive);
+								}
 							}
 						}
 					);
