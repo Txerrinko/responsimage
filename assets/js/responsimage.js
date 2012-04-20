@@ -44,13 +44,8 @@
 				}
 
 				responsimage(1);
-
-				$(window).resize(
-					function()
-					{
-						responsimage();
-					}
-				);
+				
+				$(window).resize(responsimage);
 			}
 		);
 	}()
