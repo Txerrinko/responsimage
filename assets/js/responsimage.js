@@ -3,7 +3,7 @@
 	function ()
 	{
 		'use strict';
-		
+
 		$(document).ready(
 			function()
 			{
@@ -44,7 +44,7 @@
 				}
 
 				responsimage(1);
-				
+
 				$(window).resize(responsimage);
 			}
 		);
