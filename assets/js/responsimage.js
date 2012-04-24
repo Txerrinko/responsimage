@@ -42,10 +42,14 @@
 						}
 					);
 				}
-				
+
 				responsimage(1);
 				$(window).resize(responsimage);
-				window.onorientationchange = function() { setTimeout(responsimage, 0) };
+
+				window.onorientationchange = function() 
+				{ 
+					setTimeout(responsimage, 0); 
+				};
 			}
 		);
 	}()
