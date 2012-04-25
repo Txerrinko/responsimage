@@ -10,7 +10,7 @@
 			rStatic = rPrefs.data('static') || 'http://f.cl.ly/items/0M3H0q3n1Z1S1y362d09/spacer.gif',
 			rLoading = rPrefs.data('loading') || 'http://f.cl.ly/items/2w2G3N2p0B400Z380J1u/loading.gif',
 			rLimit = rPrefs.data('limit') || 100,
-			rTimestamp = Date.now(),
+			rTimestamp = new Date(),
 			rTags = $('.responsimage');
 
 		function responsimage(rInit) {
@@ -41,7 +41,7 @@
 		responsimage(1);
 
 		$(window).resize(function () {
-			var rNow = Date.now();
+			var rNow = new Date();
 
 			if (rNow - rTimestamp >= rLimit) {
 				responsimage(false);
