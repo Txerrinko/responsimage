@@ -20,6 +20,7 @@
 		{
 			echo '<img ' .
 				'data-responsimage="burning-man-1335329256.jpg" ' .
+				'class="responsimage" ' .
 				'width="' . mt_rand(100, 500) . '" ' .
 				'height="' . mt_rand(100, 500) . '" ' .
 				'style="float:left; margin: 10px" ' .
