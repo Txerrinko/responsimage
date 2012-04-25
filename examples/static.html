@@ -5,8 +5,8 @@
 
 		<title>responsimage.com</title>
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-		<meta name="responsimage" data-server="http://imageizer.com/image/2/width/height/5/0/uploads/filename" />
-		<style type="text/css">@media(-webkit-min-device-pixel-ratio: 2){.responsimage{font-family: 'pixel-ratio-2' }}</style>
+		<meta name="responsimage" data-server="http://imageizer.com/image/2/width/height/anchor/0/uploads/filename" />
+		<style type="text/css">@media(-webkit-min-device-pixel-ratio: 2){[data-responsimage]{font-family: 'pixel-ratio-2' }}</style>
 	
 	</head>
 

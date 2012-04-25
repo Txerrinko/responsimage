@@ -1,4 +1,4 @@
-/* responsimage.com v0.2.2 */
+/* responsimage.com v0.2.3 */
 (function ($, window, Date) {
 
 	'use strict';
@@ -19,6 +19,7 @@
 					filename = rThis.data('responsimage'),
 					rWidth = rThis.width(),
 					rHeight = rThis.height(),
+					rAnchor = rThis.data('responsimage-anchor') || 5,
 					rImage;
 
 				if(rInit) {
@@ -30,7 +31,7 @@
 					rHeight *= 2;
 				}
 
-				rImage = rServer.replace('width', rWidth).replace('height', rHeight).replace('filename', filename);
+				rImage = rServer.replace('width', rWidth).replace('height', rHeight).replace('anchor', rAnchor).replace('filename', filename);
 
 				if(filename !== 'disabled') {
 					rThis.attr('src', rImage);
