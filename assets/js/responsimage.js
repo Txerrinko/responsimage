@@ -1,4 +1,4 @@
-/* responsimage.com v0.2.1 */
+/* responsimage.com v0.2.2 */
 (function ($, window, Date) {
 
 	'use strict';
@@ -11,7 +11,7 @@
 			rLoading = rPrefs.data('loading') || 'http://f.cl.ly/items/2w2G3N2p0B400Z380J1u/loading.gif',
 			rLimit = rPrefs.data('limit') || 100,
 			rTimestamp = new Date(),
-			rTags = $('.responsimage');
+			rTags = $('[data-responsimage]');
 
 		function responsimage(rInit) {
 			rTags.each(function() {
