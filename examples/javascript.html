@@ -26,9 +26,8 @@
 
 					function respond()
 					{
-						/* request a new image at every 100px jump */
-						$('.responsimage').width(Math.floor($(window).width()/100) * 100);
-						$('.responsimage').height(Math.floor($(window).height()/100) * 100);
+						$('.responsimage').width(Math.floor($(window).width()/50) * 50);
+						$('.responsimage').height(Math.floor($(window).height()/50) * 50);
 					}
 
 					$(document).ready(

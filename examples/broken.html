@@ -26,8 +26,8 @@
 
 					function respond()
 					{
-						$('.responsimage').width($(window).width() * .9);
-						$('.responsimage').height($(window).height() * .9);
+						$('.responsimage').width(Math.floor($(window).width()/50) * 50);
+						$('.responsimage').height(Math.floor($(window).height()/50) * 50);
 					}
 
 					$(document).ready(
