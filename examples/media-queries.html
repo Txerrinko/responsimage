@@ -18,7 +18,7 @@
 			@media (max-width: 480px)  { .responsimage { width: 250px;  height: 500px; } }
 			
 			@media (-webkit-min-device-pixel-ratio: 2) { /* for iphone */
-				.responsimage { 
+				[data-responsimage] { 
 					-webkit-background-size: 560px 620px; 
 					width: 280px; height: 310px; /* 2X what it should be */
 					font-family: 'pixel-ratio-2';
@@ -31,7 +31,7 @@
 
 	<body>
 		
-		<img data-responsimage="burning-man-1335329256.jpg" class="responsimage" />
+		<img data-responsimage="burning-man-1335329256.jpg" />
 
 		<script src="http://www.google.com/jsapi" type="text/javascript"></script>
 		<script type="text/javascript">google.load('jquery', '1')</script>
