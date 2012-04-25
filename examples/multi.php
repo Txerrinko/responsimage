@@ -19,7 +19,7 @@
 		for($i=0; $i<10; $i++)
 		{
 			echo '<img ' .
-				'data-responsimage="4884749481_edd0b31c6e_o-1334773151.jpg" ' .
+				'data-responsimage="burning-man-1335329256.jpg" ' .
 				'class="responsimage" ' .
 				'width="' . mt_rand(100, 500) . '" ' .
 				'height="' . mt_rand(100, 500) . '" ' .

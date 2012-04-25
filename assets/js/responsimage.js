@@ -46,5 +46,9 @@
                 responsimage(false);
             }
         });
+
+        window.onorientationchange = function() {      
+            setTimeout(responsimage, 0); 
+        };
     });
 }(jQuery, window, Date));

@@ -27,7 +27,7 @@ if(!$height)
 
 	<body>
 		
-		<img data-responsimage="4884749481_edd0b31c6e_o-1334773151.jpg" class="responsimage" width="<?=$width?>" height="<?=$height?>" />
+		<img data-responsimage="burning-man-1335329256.jpg" class="responsimage" width="<?=$width?>" height="<?=$height?>" />
 		
 		<script src="http://www.google.com/jsapi" type="text/javascript"></script>
 		<script type="text/javascript">google.load('jquery', '1')</script>
