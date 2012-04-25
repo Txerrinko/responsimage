@@ -1,56 +1,50 @@
-/*! responsimage v0.1 responsimage.com */
-(
-	function ()
-	{
-		'use strict';
+(function ($, window, Date) {
 
-		$(document).ready(
-			function()
-			{
-				function responsimage(init)
-				{
-					$(".responsimage").each(
-						function()
-						{
-							var imgStatic, imgLoading, filename, width, height, imgResponsive;
+    'use strict';
 
-							if(init)
-							{
-								imgStatic = 'http://f.cl.ly/items/0M3H0q3n1Z1S1y362d09/spacer.gif';
-								imgLoading = 'http://f.cl.ly/items/2w2G3N2p0B400Z380J1u/loading.gif';
-								$(this).attr('src', imgStatic).css('background', '#fff url(' + imgLoading + ') no-repeat center');
-								responsimage();
-							}
-							else
-							{
-								filename = $(this).data('responsimage');
-								width = $(this).width();
-								height = $(this).height();
+    $(function() {
 
-								if($(this).css('font-family') === 'pixel-ratio-2')
-								{
-									width *= 2; height *= 2;
-								}
+        var rPrefs = $('meta[name=\'responsimage\']'),
+            rServer = rPrefs.data('server'),
+            rStatic = rPrefs.data('static') || 'http://f.cl.ly/items/0M3H0q3n1Z1S1y362d09/spacer.gif',
+            rLoading = rPrefs.data('loading') || 'http://f.cl.ly/items/2w2G3N2p0B400Z380J1u/loading.gif',
+            rLimit = rPrefs.data('limit') || 100,
+            rTimestamp = Date.now(),
+            rTags = $('.responsimage');
 
-								imgResponsive = $('body').data('responsimage').replace('width', width).replace('height', height).replace('filename', filename);
+        function responsimage(rInit) {
+            rTags.each(function() {
+                var rThis = $(this),
+                    filename = rThis.data('responsimage'),
+                    rWidth = rThis.width(),
+                    rHeight = rThis.height(),
+                    rImage;
 
-								if(filename !== 'disabled')
-								{
-									$(this).attr('src', imgResponsive);
-								}
-							}
-						}
-					);
-				}
+                if(rInit) {
+                    rThis.attr('src', rStatic).css('background', '#fff url(' + rLoading + ') no-repeat center');
+                }
 
-				responsimage(1);
-				$(window).resize(responsimage);
+                if(rThis.css('font-family') === 'pixel-ratio-2') {
+                    rWidth *= 2;
+                    rHeight *= 2;
+                }
 
-				window.onorientationchange = function() 
-				{ 
-					setTimeout(responsimage, 0); 
-				};
-			}
-		);
-	}()
-);
+                rImage = rServer.replace('width', rWidth).replace('height', rHeight).replace('filename', filename);
+
+                if(filename !== 'disabled') {
+                    rThis.attr('src', rImage);
+                }
+            });
+        }
+
+        responsimage(1);
+
+        $(window).resize(function () {
+            var rNow = Date.now();
+
+            if (rNow - rTimestamp >= rLimit) {
+                responsimage(false);
+            }
+        });
+    });
+}(jQuery, window, Date));
