@@ -1,4 +1,4 @@
-/* responsimage.com v0.2 */
+/* responsimage.com v0.2.1 */
 (function ($, window, Date) {
 
 	'use strict';
