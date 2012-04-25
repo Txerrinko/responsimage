@@ -24,7 +24,7 @@
 				'width="' . mt_rand(100, 500) . '" ' .
 				'height="' . mt_rand(100, 500) . '" ' .
 				'style="float:left; margin: 10px" ' .
-			'/>' . "\n";
+			'/>' . "\n\t\t";
 		}
 
 		?>
